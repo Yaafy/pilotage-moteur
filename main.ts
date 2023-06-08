@@ -11,6 +11,8 @@ radio.onReceivedString(function (receivedString) {
     } else if (receivedString == "gauche") {
         motor.MotorRun(motor.Motors.M1, motor.Dir.CCW, 40)
         motor.MotorRun(motor.Motors.M4, motor.Dir.CCW, 255)
+    } else if (receivedString == "stop") {
+        motor.motorStopAll()
     } else {
         motor.motorStopAll()
     }
